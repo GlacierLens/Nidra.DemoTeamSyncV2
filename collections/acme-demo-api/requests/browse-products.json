@@ -1,0 +1,36 @@
+{
+  "auth": {
+    "type": "none"
+  },
+  "body": {
+    "content": "",
+    "type": "none"
+  },
+  "description": "Paginated product catalog; add category or q filters.",
+  "exampleResponses": [],
+  "folderPath": "Products",
+  "headers": [],
+  "id": "req_products_list",
+  "method": "GET",
+  "name": "Browse products",
+  "params": [
+    {
+      "enabled": true,
+      "id": "par_products_page",
+      "key": "page",
+      "value": "1"
+    },
+    {
+      "enabled": true,
+      "id": "par_products_limit",
+      "key": "limit",
+      "value": "20"
+    }
+  ],
+  "pathVariables": [],
+  "scripts": {
+    "preRequest": "nidra.request.query['demo'] = 'screenshots';\nconst signature = nidra.crypto.sha256(nidra.environment.get('baseUrl'));\nnidra.request.headers['X-Demo-Signature'] = signature;",
+    "tests": "const body = nidra.response.json();\nnidra.test('status is 200', () => nidra.expect(nidra.response.status).toBe(200));\nnidra.test('returns products', () => nidra.expect(body.data.length).toBeGreaterThan(0));"
+  },
+  "url": "{{baseUrl}}/products"
+}

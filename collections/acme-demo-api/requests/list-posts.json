@@ -1,0 +1,27 @@
+{
+  "auth": {
+    "type": "none"
+  },
+  "body": {
+    "content": "",
+    "type": "none"
+  },
+  "description": "Published blog posts.",
+  "exampleResponses": [],
+  "folderPath": "Posts",
+  "headers": [],
+  "id": "req_posts_list",
+  "method": "GET",
+  "name": "List posts",
+  "params": [
+    {
+      "enabled": true,
+      "id": "par_posts_published",
+      "key": "published",
+      "value": "true"
+    }
+  ],
+  "pathVariables": [],
+  "scripts": {},
+  "url": "{{baseUrl}}/posts"
+}

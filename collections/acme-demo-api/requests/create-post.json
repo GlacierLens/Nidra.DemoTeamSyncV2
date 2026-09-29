@@ -1,0 +1,27 @@
+{
+  "auth": {
+    "type": "none"
+  },
+  "body": {
+    "content": "{\n  \"authorId\": \"usr_001\",\n  \"title\": \"Behind the Acme catalog\",\n  \"slug\": \"behind-the-acme-catalog\",\n  \"body\": \"A demo post created from Nidra.\",\n  \"published\": true,\n  \"tags\": [\"company\", \"products\"],\n  \"createdAt\": \"2025-01-15T12:00:00.000Z\",\n  \"comments\": []\n}",
+    "type": "json"
+  },
+  "description": "Create a post in memory.",
+  "exampleResponses": [],
+  "folderPath": "Posts",
+  "headers": [
+    {
+      "enabled": true,
+      "id": "hdr_posts_json",
+      "key": "Content-Type",
+      "value": "application/json"
+    }
+  ],
+  "id": "req_posts_create",
+  "method": "POST",
+  "name": "Create post",
+  "params": [],
+  "pathVariables": [],
+  "scripts": {},
+  "url": "{{baseUrl}}/posts"
+}

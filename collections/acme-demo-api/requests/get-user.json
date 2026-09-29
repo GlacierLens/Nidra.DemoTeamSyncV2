@@ -1,0 +1,29 @@
+{
+  "auth": {
+    "type": "none"
+  },
+  "body": {
+    "content": "",
+    "type": "none"
+  },
+  "description": "Fetch one user.",
+  "exampleResponses": [],
+  "folderPath": "Users",
+  "headers": [],
+  "id": "req_users_get",
+  "method": "GET",
+  "name": "Get user",
+  "params": [],
+  "pathVariables": [
+    {
+      "enabled": true,
+      "id": "path_user_id",
+      "key": "id",
+      "value": "usr_001"
+    }
+  ],
+  "scripts": {
+    "tests": "const body = nidra.response.json();\nnidra.test('status is 200', () => nidra.expect(nidra.response.status).toBe(200));\nnidra.test('has email', () => nidra.expect(!!body.email).toBe(true));"
+  },
+  "url": "{{baseUrl}}/users/{id}"
+}

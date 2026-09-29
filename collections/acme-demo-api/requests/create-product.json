@@ -1,0 +1,27 @@
+{
+  "auth": {
+    "type": "none"
+  },
+  "body": {
+    "content": "{\n  \"name\": \"Acme Trail Camera\",\n  \"sku\": \"ACME-CAM-1\",\n  \"description\": \"A rugged demo camera.\",\n  \"price\": 129.95,\n  \"currency\": \"USD\",\n  \"category\": \"Electronics\",\n  \"inStock\": true,\n  \"rating\": 4.7,\n  \"tags\": [\"new\", \"popular\"]\n}",
+    "type": "json"
+  },
+  "description": "Create a product in memory.",
+  "exampleResponses": [],
+  "folderPath": "Products",
+  "headers": [
+    {
+      "enabled": true,
+      "id": "hdr_products_json",
+      "key": "Content-Type",
+      "value": "application/json"
+    }
+  ],
+  "id": "req_products_create",
+  "method": "POST",
+  "name": "Create product",
+  "params": [],
+  "pathVariables": [],
+  "scripts": {},
+  "url": "{{baseUrl}}/products"
+}

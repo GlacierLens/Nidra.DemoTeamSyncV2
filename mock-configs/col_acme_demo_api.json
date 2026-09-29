@@ -1,0 +1,302 @@
+{
+  "collectionId": "col_acme_demo_api",
+  "endpoints": [
+    {
+      "enabled": true,
+      "folderPath": [
+        "Users"
+      ],
+      "id": "3f62cac1-3b2a-4f03-aae2-cfb4a6478a89",
+      "method": "GET",
+      "path": "/users",
+      "response": {
+        "body": "{}",
+        "bodyType": "json",
+        "headers": [],
+        "statusCode": 200
+      },
+      "sourceRequestId": "req_users_list",
+      "sourceRequestIds": [
+        "req_users_list"
+      ]
+    },
+    {
+      "enabled": true,
+      "folderPath": [
+        "Users"
+      ],
+      "id": "57754435-6f8a-40a6-9ffd-db65e1d05081",
+      "method": "GET",
+      "path": "/users/{id}",
+      "response": {
+        "body": "{}",
+        "bodyType": "json",
+        "headers": [],
+        "statusCode": 200
+      },
+      "sourceRequestId": "req_users_get",
+      "sourceRequestIds": [
+        "req_users_get"
+      ]
+    },
+    {
+      "enabled": true,
+      "folderPath": [
+        "Users"
+      ],
+      "id": "d0429368-4913-4ad3-ac66-aa1489a85d96",
+      "method": "POST",
+      "path": "/users",
+      "response": {
+        "body": "{}",
+        "bodyType": "json",
+        "headers": [],
+        "statusCode": 200
+      },
+      "sourceRequestId": "req_users_create",
+      "sourceRequestIds": [
+        "req_users_create"
+      ]
+    },
+    {
+      "enabled": true,
+      "folderPath": [
+        "Products"
+      ],
+      "id": "3ecc8ac1-c28c-415a-a74d-a306305dab38",
+      "method": "GET",
+      "path": "/products",
+      "response": {
+        "body": "{}",
+        "bodyType": "json",
+        "headers": [],
+        "statusCode": 200
+      },
+      "sourceRequestId": "req_products_list",
+      "sourceRequestIds": [
+        "req_products_list"
+      ]
+    },
+    {
+      "enabled": true,
+      "folderPath": [
+        "Products"
+      ],
+      "id": "2a32b81e-d01b-42cc-9964-7805d82e7bec",
+      "method": "GET",
+      "path": "/products/{id}",
+      "response": {
+        "body": "{}",
+        "bodyType": "json",
+        "headers": [],
+        "statusCode": 200
+      },
+      "sourceRequestId": "req_products_get",
+      "sourceRequestIds": [
+        "req_products_get"
+      ]
+    },
+    {
+      "enabled": true,
+      "folderPath": [
+        "Products"
+      ],
+      "id": "f1c18ae0-a5cc-472f-b23e-4851fb6a8e07",
+      "method": "POST",
+      "path": "/products",
+      "response": {
+        "body": "{}",
+        "bodyType": "json",
+        "headers": [],
+        "statusCode": 200
+      },
+      "sourceRequestId": "req_products_create",
+      "sourceRequestIds": [
+        "req_products_create"
+      ]
+    },
+    {
+      "enabled": true,
+      "folderPath": [
+        "Orders"
+      ],
+      "id": "7bf1dc27-8f92-46b7-a97d-0099b4363da3",
+      "method": "GET",
+      "path": "/orders",
+      "response": {
+        "body": "{}",
+        "bodyType": "json",
+        "headers": [],
+        "statusCode": 200
+      },
+      "sourceRequestId": "req_orders_list",
+      "sourceRequestIds": [
+        "req_orders_list"
+      ]
+    },
+    {
+      "enabled": true,
+      "folderPath": [
+        "Orders"
+      ],
+      "id": "0be03fea-3a7c-47b0-8e79-f68e127ba72a",
+      "method": "GET",
+      "path": "/orders/{id}",
+      "response": {
+        "body": "{}",
+        "bodyType": "json",
+        "headers": [],
+        "statusCode": 200
+      },
+      "sourceRequestId": "req_orders_get",
+      "sourceRequestIds": [
+        "req_orders_get"
+      ]
+    },
+    {
+      "enabled": true,
+      "folderPath": [
+        "Orders"
+      ],
+      "id": "8883e956-1c77-43dd-99fd-f84317a0e841",
+      "method": "POST",
+      "path": "/orders",
+      "response": {
+        "body": "{}",
+        "bodyType": "json",
+        "headers": [],
+        "statusCode": 200
+      },
+      "sourceRequestId": "req_orders_create",
+      "sourceRequestIds": [
+        "req_orders_create"
+      ]
+    },
+    {
+      "enabled": true,
+      "folderPath": [
+        "Posts"
+      ],
+      "id": "f772353a-381b-4d0d-bf50-e7cc93f57ba3",
+      "method": "GET",
+      "path": "/posts",
+      "response": {
+        "body": "{}",
+        "bodyType": "json",
+        "headers": [],
+        "statusCode": 200
+      },
+      "sourceRequestId": "req_posts_list",
+      "sourceRequestIds": [
+        "req_posts_list"
+      ]
+    },
+    {
+      "enabled": true,
+      "folderPath": [
+        "Posts"
+      ],
+      "id": "fa21af69-ed2f-412e-997b-f7be13209df8",
+      "method": "GET",
+      "path": "/posts/{id}",
+      "response": {
+        "body": "{}",
+        "bodyType": "json",
+        "headers": [],
+        "statusCode": 200
+      },
+      "sourceRequestId": "req_posts_get",
+      "sourceRequestIds": [
+        "req_posts_get"
+      ]
+    },
+    {
+      "enabled": true,
+      "folderPath": [
+        "Posts"
+      ],
+      "id": "cd2a3991-9b86-420c-92e2-5d63aeeaa43f",
+      "method": "POST",
+      "path": "/posts",
+      "response": {
+        "body": "{}",
+        "bodyType": "json",
+        "headers": [],
+        "statusCode": 200
+      },
+      "sourceRequestId": "req_posts_create",
+      "sourceRequestIds": [
+        "req_posts_create"
+      ]
+    },
+    {
+      "enabled": true,
+      "folderPath": [
+        "Auth"
+      ],
+      "id": "f5389853-a488-4c95-8c4c-30f288512fd4",
+      "method": "POST",
+      "path": "/oauth/token",
+      "response": {
+        "body": "{}",
+        "bodyType": "json",
+        "headers": [],
+        "statusCode": 200
+      },
+      "sourceRequestId": "req_auth_token",
+      "sourceRequestIds": [
+        "req_auth_token"
+      ]
+    },
+    {
+      "enabled": true,
+      "folderPath": [
+        "Auth"
+      ],
+      "id": "590e0238-75f8-453a-b16a-954268e29b46",
+      "method": "GET",
+      "path": "/protected/bearer",
+      "response": {
+        "body": "{}",
+        "bodyType": "json",
+        "headers": [],
+        "statusCode": 200
+      },
+      "sourceRequestId": "req_auth_bearer",
+      "sourceRequestIds": [
+        "req_auth_bearer"
+      ]
+    },
+    {
+      "enabled": true,
+      "folderPath": [
+        "Auth"
+      ],
+      "id": "e8efbce2-1224-4b80-b4d3-236ab3997ee3",
+      "method": "GET",
+      "path": "/protected/apikey",
+      "response": {
+        "body": "{}",
+        "bodyType": "json",
+        "headers": [],
+        "statusCode": 200
+      },
+      "sourceRequestId": "req_auth_apikey",
+      "sourceRequestIds": [
+        "req_auth_apikey"
+      ]
+    },
+    {
+      "enabled": true,
+      "id": "7218d6ef-de12-4067-8bb1-995950b0a661",
+      "method": "GET",
+      "path": "/api/newEndpoint",
+      "response": {
+        "body": "{ \"title\": \"Response test\", \"value\": \"OK!\" }",
+        "bodyType": "json",
+        "headers": [],
+        "statusCode": 200
+      }
+    }
+  ]
+}

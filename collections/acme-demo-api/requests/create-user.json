@@ -1,0 +1,27 @@
+{
+  "auth": {
+    "type": "none"
+  },
+  "body": {
+    "content": "{\n  \"firstName\": \"Avery\",\n  \"lastName\": \"Stone\",\n  \"email\": \"avery.stone@example.test\",\n  \"role\": \"customer\",\n  \"address\": { \"street\": \"1 Demo Way\", \"city\": \"Boston\", \"state\": \"MA\", \"zip\": \"02108\", \"country\": \"United States\" }\n}",
+    "type": "json"
+  },
+  "description": "Create a user in memory.",
+  "exampleResponses": [],
+  "folderPath": "Users",
+  "headers": [
+    {
+      "enabled": true,
+      "id": "hdr_users_json",
+      "key": "Content-Type",
+      "value": "application/json"
+    }
+  ],
+  "id": "req_users_create",
+  "method": "POST",
+  "name": "Create user",
+  "params": [],
+  "pathVariables": [],
+  "scripts": {},
+  "url": "{{baseUrl}}/users"
+}

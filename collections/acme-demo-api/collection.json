@@ -1,0 +1,103 @@
+{
+  "formatVersion": 2,
+  "id": "col_acme_demo_api",
+  "isTeamCollection": true,
+  "mockAlias": "young-red-stork",
+  "name": "Acme Demo API",
+  "nodes": [
+    {
+      "children": [
+        {
+          "file": "list-users.json",
+          "requestId": "req_users_list"
+        },
+        {
+          "file": "get-user.json",
+          "requestId": "req_users_get"
+        },
+        {
+          "file": "create-user.json",
+          "requestId": "req_users_create"
+        }
+      ],
+      "id": "fld_users",
+      "name": "Users"
+    },
+    {
+      "children": [
+        {
+          "file": "browse-products.json",
+          "requestId": "req_products_list"
+        },
+        {
+          "file": "get-product.json",
+          "requestId": "req_products_get"
+        },
+        {
+          "file": "create-product.json",
+          "requestId": "req_products_create"
+        }
+      ],
+      "id": "fld_products",
+      "name": "Products"
+    },
+    {
+      "children": [
+        {
+          "file": "list-orders.json",
+          "requestId": "req_orders_list"
+        },
+        {
+          "file": "get-order.json",
+          "requestId": "req_orders_get"
+        },
+        {
+          "file": "create-order.json",
+          "requestId": "req_orders_create"
+        }
+      ],
+      "id": "fld_orders",
+      "name": "Orders"
+    },
+    {
+      "children": [
+        {
+          "file": "list-posts.json",
+          "requestId": "req_posts_list"
+        },
+        {
+          "file": "get-post.json",
+          "requestId": "req_posts_get"
+        },
+        {
+          "file": "create-post.json",
+          "requestId": "req_posts_create"
+        }
+      ],
+      "id": "fld_posts",
+      "name": "Posts"
+    },
+    {
+      "children": [
+        {
+          "file": "get-oauth-token.json",
+          "requestId": "req_auth_token"
+        },
+        {
+          "file": "bearer-protected.json",
+          "requestId": "req_auth_bearer"
+        },
+        {
+          "file": "api-key-protected.json",
+          "requestId": "req_auth_apikey"
+        }
+      ],
+      "id": "fld_auth",
+      "name": "Auth"
+    },
+    {
+      "file": "mcp-connection.json",
+      "requestId": "438c3695-59d8-4f61-be4a-d1fcb2d56e69"
+    }
+  ]
+}

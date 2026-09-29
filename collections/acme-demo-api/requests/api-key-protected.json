@@ -1,0 +1,29 @@
+{
+  "auth": {
+    "type": "none"
+  },
+  "body": {
+    "content": "",
+    "type": "none"
+  },
+  "description": "Protected endpoint using the environment API key.",
+  "exampleResponses": [],
+  "folderPath": "Auth",
+  "headers": [
+    {
+      "enabled": true,
+      "id": "hdr_api_key",
+      "key": "X-API-Key",
+      "value": "{{apiKey}}"
+    }
+  ],
+  "id": "req_auth_apikey",
+  "method": "GET",
+  "name": "API key protected",
+  "params": [],
+  "pathVariables": [],
+  "scripts": {
+    "preRequest": "nidra.request.headers['X-API-Key'] = nidra.environment.get('apiKey');"
+  },
+  "url": "{{baseUrl}}/protected/apikey"
+}

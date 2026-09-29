@@ -1,0 +1,96 @@
+{
+  "id": "con_auth_flow",
+  "name": "OAuth bearer flow",
+  "steps": [
+    {
+      "assertionConfig": {
+        "assertions": [
+          {
+            "expected": "200",
+            "id": "assert_token_200",
+            "message": "Token endpoint succeeds",
+            "target": "{{response.status}}",
+            "type": "deep-equals"
+          },
+          {
+            "id": "assert_token_value",
+            "message": "Access token is returned",
+            "target": "{{response.body.access_token}}",
+            "type": "not-empty"
+          }
+        ]
+      },
+      "continueOnFailure": false,
+      "extractions": [
+        {
+          "id": "ext_access_token",
+          "path": "access_token",
+          "source": "body",
+          "type": "string",
+          "variableName": "accessToken"
+        }
+      ],
+      "id": "step_get_token",
+      "name": "Get access token",
+      "request": {
+        "auth": {
+          "type": "none"
+        },
+        "body": {
+          "content": "[{\"id\":\"f1\",\"key\":\"client_id\",\"value\":\"nidra-demo\",\"enabled\":true},{\"id\":\"f2\",\"key\":\"client_secret\",\"value\":\"not-a-secret\",\"enabled\":true},{\"id\":\"f3\",\"key\":\"grant_type\",\"value\":\"client_credentials\",\"enabled\":true}]",
+          "type": "form"
+        },
+        "headers": [
+          {
+            "enabled": true,
+            "id": "hdr_af_form",
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "method": "POST",
+        "params": [],
+        "pathVariables": [],
+        "url": "{{baseUrl}}/oauth/token"
+      }
+    },
+    {
+      "assertionConfig": {
+        "assertions": [
+          {
+            "expected": "200",
+            "id": "assert_protected_200",
+            "message": "Bearer token is accepted",
+            "target": "{{response.status}}",
+            "type": "deep-equals"
+          }
+        ]
+      },
+      "continueOnFailure": false,
+      "extractions": [],
+      "id": "step_use_token",
+      "name": "Call bearer endpoint",
+      "request": {
+        "auth": {
+          "type": "none"
+        },
+        "body": {
+          "content": "",
+          "type": "none"
+        },
+        "headers": [
+          {
+            "enabled": true,
+            "id": "hdr_af_bearer",
+            "key": "Authorization",
+            "value": "Bearer {{circuit.accessToken}}"
+          }
+        ],
+        "method": "GET",
+        "params": [],
+        "pathVariables": [],
+        "url": "{{baseUrl}}/protected/bearer"
+      }
+    }
+  ]
+}

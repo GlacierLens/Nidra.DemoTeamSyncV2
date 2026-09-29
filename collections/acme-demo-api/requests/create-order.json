@@ -1,0 +1,27 @@
+{
+  "auth": {
+    "type": "none"
+  },
+  "body": {
+    "content": "{\n  \"userId\": \"usr_001\",\n  \"status\": \"pending\",\n  \"total\": 49.98,\n  \"currency\": \"USD\",\n  \"createdAt\": \"2025-01-15T12:00:00.000Z\",\n  \"items\": [{ \"productId\": \"prd_001\", \"qty\": 2, \"price\": 24.99 }]\n}",
+    "type": "json"
+  },
+  "description": "Create an order in memory.",
+  "exampleResponses": [],
+  "folderPath": "Orders",
+  "headers": [
+    {
+      "enabled": true,
+      "id": "hdr_orders_json",
+      "key": "Content-Type",
+      "value": "application/json"
+    }
+  ],
+  "id": "req_orders_create",
+  "method": "POST",
+  "name": "Create order",
+  "params": [],
+  "pathVariables": [],
+  "scripts": {},
+  "url": "{{baseUrl}}/orders"
+}

@@ -1,0 +1,27 @@
+{
+  "auth": {
+    "type": "none"
+  },
+  "body": {
+    "content": "",
+    "type": "none"
+  },
+  "description": "Fetch one product.",
+  "exampleResponses": [],
+  "folderPath": "Products",
+  "headers": [],
+  "id": "req_products_get",
+  "method": "GET",
+  "name": "Get product",
+  "params": [],
+  "pathVariables": [
+    {
+      "enabled": true,
+      "id": "path_product_id",
+      "key": "id",
+      "value": "prd_001"
+    }
+  ],
+  "scripts": {},
+  "url": "{{baseUrl}}/products/{id}"
+}

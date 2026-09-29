@@ -1,0 +1,95 @@
+{
+  "id": "con_browse_products",
+  "name": "Browse products",
+  "steps": [
+    {
+      "assertionConfig": {
+        "assertions": [
+          {
+            "expected": "200",
+            "id": "assert_products_200",
+            "message": "Product list loads",
+            "target": "{{response.status}}",
+            "type": "deep-equals"
+          },
+          {
+            "id": "assert_products_data",
+            "message": "Product list is not empty",
+            "target": "{{response.body.data}}",
+            "type": "not-empty"
+          }
+        ]
+      },
+      "continueOnFailure": false,
+      "extractions": [
+        {
+          "id": "ext_product_id",
+          "path": "data.0.id",
+          "source": "body",
+          "type": "string",
+          "variableName": "productId"
+        }
+      ],
+      "id": "step_list_products",
+      "name": "List products",
+      "request": {
+        "auth": {
+          "type": "none"
+        },
+        "body": {
+          "content": "",
+          "type": "none"
+        },
+        "headers": [],
+        "method": "GET",
+        "params": [
+          {
+            "enabled": true,
+            "id": "par_bp_limit",
+            "key": "limit",
+            "value": "5"
+          }
+        ],
+        "pathVariables": [],
+        "url": "{{baseUrl}}/products"
+      }
+    },
+    {
+      "assertionConfig": {
+        "assertions": [
+          {
+            "id": "assert_product_id",
+            "message": "Fetched product has an id",
+            "target": "{{response.body.id}}",
+            "type": "not-empty"
+          }
+        ]
+      },
+      "continueOnFailure": false,
+      "extractions": [],
+      "id": "step_get_product",
+      "name": "Fetch first product",
+      "request": {
+        "auth": {
+          "type": "none"
+        },
+        "body": {
+          "content": "",
+          "type": "none"
+        },
+        "headers": [],
+        "method": "GET",
+        "params": [],
+        "pathVariables": [
+          {
+            "enabled": true,
+            "id": "path_bp_product",
+            "key": "id",
+            "value": "{{circuit.productId}}"
+          }
+        ],
+        "url": "{{baseUrl}}/products/{id}"
+      }
+    }
+  ]
+}

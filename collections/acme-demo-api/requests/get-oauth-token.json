@@ -1,0 +1,29 @@
+{
+  "auth": {
+    "type": "none"
+  },
+  "body": {
+    "content": "[{\"id\":\"f1\",\"key\":\"client_id\",\"value\":\"nidra-demo\",\"enabled\":true},{\"id\":\"f2\",\"key\":\"client_secret\",\"value\":\"not-a-secret\",\"enabled\":true},{\"id\":\"f3\",\"key\":\"grant_type\",\"value\":\"client_credentials\",\"enabled\":true}]",
+    "type": "form"
+  },
+  "description": "Obtain a deterministic fake bearer token.",
+  "exampleResponses": [],
+  "folderPath": "Auth",
+  "headers": [
+    {
+      "enabled": true,
+      "id": "hdr_auth_form",
+      "key": "Content-Type",
+      "value": "application/x-www-form-urlencoded"
+    }
+  ],
+  "id": "req_auth_token",
+  "method": "POST",
+  "name": "Get OAuth token",
+  "params": [],
+  "pathVariables": [],
+  "scripts": {
+    "tests": "const body = nidra.response.json();\nnidra.test('status is 200', () => nidra.expect(nidra.response.status).toBe(200));\nnidra.test('has access token', () => nidra.expect(!!body.access_token).toBe(true));"
+  },
+  "url": "{{baseUrl}}/oauth/token"
+}

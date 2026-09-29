@@ -1,0 +1,27 @@
+{
+  "auth": {
+    "type": "none"
+  },
+  "body": {
+    "content": "",
+    "type": "none"
+  },
+  "description": "Fetch one post with comments.",
+  "exampleResponses": [],
+  "folderPath": "Posts",
+  "headers": [],
+  "id": "req_posts_get",
+  "method": "GET",
+  "name": "Get post",
+  "params": [],
+  "pathVariables": [
+    {
+      "enabled": true,
+      "id": "path_post_id",
+      "key": "id",
+      "value": "pst_001"
+    }
+  ],
+  "scripts": {},
+  "url": "{{baseUrl}}/posts/{id}"
+}

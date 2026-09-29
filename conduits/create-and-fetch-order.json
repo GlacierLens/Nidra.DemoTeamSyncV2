@@ -1,0 +1,143 @@
+{
+  "id": "con_create_fetch_order",
+  "name": "Create and fetch order",
+  "steps": [
+    {
+      "assertionConfig": {
+        "assertions": [
+          {
+            "expected": "201",
+            "id": "assert_user_201",
+            "message": "User is created",
+            "target": "{{response.status}}",
+            "type": "deep-equals"
+          }
+        ]
+      },
+      "continueOnFailure": false,
+      "extractions": [
+        {
+          "id": "ext_user_id",
+          "path": "id",
+          "source": "body",
+          "type": "string",
+          "variableName": "userId"
+        }
+      ],
+      "id": "step_create_user",
+      "name": "Create customer",
+      "request": {
+        "auth": {
+          "type": "none"
+        },
+        "body": {
+          "content": "{\"firstName\":\"Morgan\",\"lastName\":\"Rivera\",\"email\":\"morgan.rivera@example.test\",\"role\":\"customer\",\"address\":{\"street\":\"10 Market St\",\"city\":\"Boston\",\"state\":\"MA\",\"zip\":\"02108\",\"country\":\"United States\"}}",
+          "type": "json"
+        },
+        "headers": [
+          {
+            "enabled": true,
+            "id": "hdr_cfo_user_json",
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "method": "POST",
+        "params": [],
+        "pathVariables": [],
+        "url": "{{baseUrl}}/users"
+      }
+    },
+    {
+      "assertionConfig": {
+        "assertions": [
+          {
+            "expected": "201",
+            "id": "assert_order_201",
+            "message": "Order is created",
+            "target": "{{response.status}}",
+            "type": "deep-equals"
+          }
+        ]
+      },
+      "continueOnFailure": false,
+      "extractions": [
+        {
+          "id": "ext_order_id",
+          "path": "id",
+          "source": "body",
+          "type": "string",
+          "variableName": "orderId"
+        }
+      ],
+      "id": "step_create_order",
+      "name": "Create order for customer",
+      "request": {
+        "auth": {
+          "type": "none"
+        },
+        "body": {
+          "content": "{\"userId\":\"{{circuit.userId}}\",\"status\":\"pending\",\"total\":59.98,\"currency\":\"USD\",\"createdAt\":\"2025-01-15T12:00:00.000Z\",\"items\":[{\"productId\":\"prd_001\",\"qty\":2,\"price\":29.99}]}",
+          "type": "json"
+        },
+        "headers": [
+          {
+            "enabled": true,
+            "id": "hdr_cfo_order_json",
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "method": "POST",
+        "params": [],
+        "pathVariables": [],
+        "url": "{{baseUrl}}/orders"
+      }
+    },
+    {
+      "assertionConfig": {
+        "assertions": [
+          {
+            "expected": "200",
+            "id": "assert_fetch_200",
+            "message": "Created order can be fetched",
+            "target": "{{response.status}}",
+            "type": "deep-equals"
+          },
+          {
+            "expected": "{{circuit.userId}}",
+            "id": "assert_fetch_user",
+            "message": "Order belongs to created user",
+            "target": "{{response.body.userId}}",
+            "type": "deep-equals"
+          }
+        ]
+      },
+      "continueOnFailure": false,
+      "extractions": [],
+      "id": "step_fetch_order",
+      "name": "Fetch created order",
+      "request": {
+        "auth": {
+          "type": "none"
+        },
+        "body": {
+          "content": "",
+          "type": "none"
+        },
+        "headers": [],
+        "method": "GET",
+        "params": [],
+        "pathVariables": [
+          {
+            "enabled": true,
+            "id": "path_cfo_order",
+            "key": "id",
+            "value": "{{circuit.orderId}}"
+          }
+        ],
+        "url": "{{baseUrl}}/orders/{id}"
+      }
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "auth": {
+    "type": "none"
+  },
+  "body": {
+    "content": "",
+    "type": "none"
+  },
+  "description": "Paginated orders with optional status filter.",
+  "exampleResponses": [],
+  "folderPath": "Orders",
+  "headers": [],
+  "id": "req_orders_list",
+  "method": "GET",
+  "name": "List orders",
+  "params": [
+    {
+      "enabled": false,
+      "id": "par_order_status",
+      "key": "status",
+      "value": "shipped"
+    }
+  ],
+  "pathVariables": [],
+  "scripts": {
+    "tests": "const body = nidra.response.json();\nnidra.test('status is 200', () => nidra.expect(nidra.response.status).toBe(200));\nnidra.test('total is a number', () => nidra.expect(typeof body.total).toBe('number'));"
+  },
+  "url": "{{baseUrl}}/orders"
+}

@@ -1,0 +1,23 @@
+{
+  "auth": {
+    "type": "inherit"
+  },
+  "body": {
+    "content": "",
+    "type": "none"
+  },
+  "folderPath": "",
+  "headers": [],
+  "id": "438c3695-59d8-4f61-be4a-d1fcb2d56e69",
+  "kind": "mcp",
+  "mcp": {
+    "args": [
+      "C:\\Users\\rober\\Syncthing\\source\\GlacierLens\\Nidra.DemoApi\\src\\mcp.js"
+    ],
+    "command": "node"
+  },
+  "method": "GET",
+  "name": "Mcp Connection",
+  "params": [],
+  "url": ""
+}

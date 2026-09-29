@@ -1,0 +1,27 @@
+{
+  "auth": {
+    "type": "none"
+  },
+  "body": {
+    "content": "",
+    "type": "none"
+  },
+  "description": "Fetch one order.",
+  "exampleResponses": [],
+  "folderPath": "Orders",
+  "headers": [],
+  "id": "req_orders_get",
+  "method": "GET",
+  "name": "Get order",
+  "params": [],
+  "pathVariables": [
+    {
+      "enabled": true,
+      "id": "path_order_id",
+      "key": "id",
+      "value": "ord_001"
+    }
+  ],
+  "scripts": {},
+  "url": "{{baseUrl}}/orders/{id}"
+}

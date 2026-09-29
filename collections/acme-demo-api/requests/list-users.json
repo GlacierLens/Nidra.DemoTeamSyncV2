@@ -1,0 +1,30 @@
+{
+  "auth": {
+    "type": "none"
+  },
+  "body": {
+    "content": "",
+    "type": "none"
+  },
+  "description": "Paginated users list.",
+  "exampleResponses": [],
+  "folderPath": "Users",
+  "headers": [],
+  "id": "req_users_list",
+  "method": "GET",
+  "name": "List users",
+  "params": [
+    {
+      "enabled": true,
+      "id": "par_users_limit",
+      "key": "limit",
+      "value": "10"
+    }
+  ],
+  "pathVariables": [],
+  "scripts": {
+    "preRequest": "nidra.request.headers['X-Demo-Source'] = nidra.environment.get('baseUrl');",
+    "tests": "const body = nidra.response.json();\nnidra.test('status is 200', () => nidra.expect(nidra.response.status).toBe(200));\nnidra.test('returns users', () => nidra.expect(body.data.length).toBeGreaterThan(0));"
+  },
+  "url": "{{baseUrl}}/users"
+}

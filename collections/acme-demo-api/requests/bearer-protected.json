@@ -1,0 +1,27 @@
+{
+  "auth": {
+    "type": "none"
+  },
+  "body": {
+    "content": "",
+    "type": "none"
+  },
+  "description": "Protected endpoint using an explicit demo bearer header.",
+  "exampleResponses": [],
+  "folderPath": "Auth",
+  "headers": [
+    {
+      "enabled": true,
+      "id": "hdr_bearer",
+      "key": "Authorization",
+      "value": "Bearer demo-token"
+    }
+  ],
+  "id": "req_auth_bearer",
+  "method": "GET",
+  "name": "Bearer protected",
+  "params": [],
+  "pathVariables": [],
+  "scripts": {},
+  "url": "{{baseUrl}}/protected/bearer"
+}
