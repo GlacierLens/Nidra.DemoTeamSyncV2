@@ -1,0 +1,19 @@
+{
+  "id": "09fea75d-7624-4afd-ae6d-0ff106b4aa24",
+  "name": "Dev",
+  "variables": [
+    {
+      "enabled": true,
+      "encrypted": {
+        "ciphertext": "sJ05aeIMpU0VsCaFGg==",
+        "keyId": "d3890425-50c0-4706-9b4c-a83d6c98c4a9",
+        "nonce": "q3QjU3eAJjJKBLz6",
+        "tag": "CA5lesMutM9qWbYLBi1qbg==",
+        "v": 1
+      },
+      "id": "5a27aac0-de17-4059-9f3b-6f2257fadd6a",
+      "key": "apiToken",
+      "valueMode": "encrypted"
+    }
+  ]
+}
