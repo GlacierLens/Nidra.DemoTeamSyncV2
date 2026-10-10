@@ -5,11 +5,11 @@
     {
       "enabled": true,
       "encrypted": {
-        "v": 1,
-        "keyId": "40c0e9ba-f839-4677-9496-1d1433f70ab8",
-        "nonce": "rQWKpS7qft5JTDJP",
-        "ciphertext": "QgCK//UWCtUGICFe/g==",
-        "tag": "ECIBwnSkDQ+plYreE7sOUw=="
+        "ciphertext": "GpxUhjIEaQtgcxoZhQ==",
+        "keyId": "99f8bfd1-8657-4043-998f-27faa4e595de",
+        "nonce": "s/1ZByunwDsexvul",
+        "tag": "peJDsyou91yYB2MDYGOAnw==",
+        "v": 1
       },
       "id": "5a27aac0-de17-4059-9f3b-6f2257fadd6a",
       "key": "apiToken",
