@@ -5,15 +5,21 @@
     {
       "enabled": true,
       "encrypted": {
-        "v": 1,
+        "ciphertext": "QgCK//UWCtUGICFe/g==",
         "keyId": "40c0e9ba-f839-4677-9496-1d1433f70ab8",
         "nonce": "rQWKpS7qft5JTDJP",
-        "ciphertext": "QgCK//UWCtUGICFe/g==",
-        "tag": "ECIBwnSkDQ+plYreE7sOUw=="
+        "tag": "ECIBwnSkDQ+plYreE7sOUw==",
+        "v": 1
       },
       "id": "5a27aac0-de17-4059-9f3b-6f2257fadd6a",
       "key": "apiToken",
       "valueMode": "encrypted"
+    },
+    {
+      "enabled": true,
+      "id": "93774307-ec02-4ef7-91c5-c8e9f8d5c080",
+      "key": "note2",
+      "value": "y"
     }
   ]
 }
