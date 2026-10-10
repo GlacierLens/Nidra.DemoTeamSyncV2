@@ -5,10 +5,10 @@
     {
       "enabled": true,
       "encrypted": {
-        "ciphertext": "GpxUhjIEaQtgcxoZhQ==",
-        "keyId": "99f8bfd1-8657-4043-998f-27faa4e595de",
-        "nonce": "s/1ZByunwDsexvul",
-        "tag": "peJDsyou91yYB2MDYGOAnw==",
+        "ciphertext": "0jNW3/jRiHxtHIw7ng==",
+        "keyId": "30544952-2947-4199-9a71-102ecaa0889d",
+        "nonce": "1auQyTMhENIwOfbD",
+        "tag": "oHXB9jKR3FnGNCOCsY3Fmg==",
         "v": 1
       },
       "id": "5a27aac0-de17-4059-9f3b-6f2257fadd6a",
